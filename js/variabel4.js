@@ -28,4 +28,4 @@ console.log(num2 !== num1); // 2개 지만 변수 종류도 비교 = true 나옴
 // 논리연산자 | 조건문, 반복문 쓰다보면 값을 추적하기 힘들어 진다.
 console.clear();
 console.log(num1 >= num2 || num1 <= 100); // true 'or' false 임으로 true
-console.log(num1 >= num2 && !(num1 <= 100)); // true 'and' !(false)= true 임으로 true
+console.log(num1 >= num2 && !(num1 <= 100)); // true 'and' !(false) = true 임으로 true
