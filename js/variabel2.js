@@ -34,10 +34,12 @@ let person = {
   age: 20,
   height: 158.9,
   weight: 58.3,
-  personInfo: function() {
+  personInfo: function() { // 힘누는 기능으로 나타낼 수 있다. << 이름과 나이를 출력
     console.log('이름은 ' + person.name + '이고 나이는 ' + person.age);
   }
-}; // 중괄호 = 객체 obj(변수)에 여러 정보를 저장
+}
+personInfo 
+// 중괄호 = 객체 obj(변수)에 여러 정보를 저장
 
 console.log(person.name); // 객체 뒤에 . 을 붙여서 속성을 나타내줄 수 있다 ex)js1에 있는 item.value
 
