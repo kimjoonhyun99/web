@@ -6,7 +6,7 @@ let data = JSON.parse(json); // json 문자열 -> 객체 변환, parse 많이 �
 console.log(data); // 객체
 
 // button<삭제> 만들기 
-let btnTemplate = "<button onclick='deleteTr(event)'>삭제</button>";
+let btnTemplate = "<button class='btn btn-danger'onclick='deleteTr(event)'>삭제</button>";
 
 for (let emp of data) { // {let emp i = 0; i < data.lenght; i++} = let emp of data
   console.log(emp);
@@ -55,15 +55,16 @@ function makeTr(emp = {}) { // {} = object
   str += "</tr>";
   return str;
 }
-
+function deleteTr (par) {
+  console.dir(par.target.parentElement.parentElement);
+  par.target.parentElement.parentElement.remove();
+}
 makeTr({
   id: 12,
   first_name: "kildong",
   email: "kildong@email.com" // of => 값들 = 12, kildong > 값이 필요하다.
 });
-
 // 사원목록(table 형식을 사용)을 출력 document.write
-
 let elist = "<table class='table'><thead><tr>";
 for (let field of fields) { // let fields = ['id', 'first_name', 'email', 'gender', 'salary'];
   elist += `<th>${field}</th>`
