@@ -8,7 +8,7 @@ console.log(data); // 객체
 // button<삭제> 만들기 
 let btnTemplate = "<button class='btn btn-danger'onclick='deleteTr(event)'>삭제</button>";
 
-for (let emp of data) { // {let emp i = 0; i < data.lenght; i++} = let emp of data
+for (let emp of data) {
   console.log(emp);
 }
 console.clear();
@@ -31,6 +31,7 @@ document.querySelector('#searchBtn')
   // 2. select "change"
   document.querySelector('select.form-control')
   .addEventListener('change', function () {
+    console.log(this);
     let changeValue = document.querySelector('#selectGender').value;
     let list = "";
     for (let emp of data) {
@@ -56,7 +57,6 @@ function makeTr(emp = {}) { // {} = object
   return str;
 }
 function deleteTr (par) {
-  console.dir(par.target.parentElement.parentElement);
   par.target.parentElement.parentElement.remove();
 }
 makeTr({
